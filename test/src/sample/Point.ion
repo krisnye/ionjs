@@ -16,13 +16,6 @@ export class Point
             temp = foo
             log(x)
 
-        while true
-            console.log
-                "hello"
-                "world"
-                "ion"
-                "rocks"
-
         let foo = Foo
             1
             2

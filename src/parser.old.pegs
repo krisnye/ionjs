@@ -22,8 +22,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 Module
-    = EOL? statements:Statement* EOL EOF
-    { return node("Program", {sourceType:"module", body:statements}) }
+    = EOL? imports:ImportDeclarations? declarations:Declaration* exports:ExportStatement EOL EOF
+    { return node("Module", {imports:imports || [], declarations, exports}) }
 
 //  type Whole = Integer{ value > 0 and value < 10 }
 //  this = special keyword for class instance
@@ -70,11 +70,9 @@ Statement
     / ForOfStatement
     / ReturnStatement
     / WhileStatement
-    / ExportStatement
 
 Declaration
-    = ImportDeclaration
-    / TypeDeclaration
+    = TypeDeclaration
     / ClassDeclaration
     / VariableDeclaration
 
@@ -258,11 +256,11 @@ TypeReference
 UnaryOperator
     = "+"
     / "-"
-    / "not " { return "!" }
+    / @"not" " " _
 
 UnaryExpression
     = MemberExpression
-    / operator:UnaryOperator _ argument:MemberExpression { return node("UnaryExpression", {operator,argument})}
+    / operator:UnaryOperator argument:MemberExpression { return node("UnaryExpression", {operator,argument})}
 
 ExponentiationOperator "operator"
     = "^"
