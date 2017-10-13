@@ -1,0 +1,1524 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../node_modules/jsondiffpatch/public/formatters-styles/html.css" />
+        <style>
+        :root {
+            --border: solid 1px gray;
+        }
+        body {
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            font-family: Monaco;
+        }
+        article {
+            border: var(--border);
+        }
+        article {
+            border: var(--border);
+            padding: 0px;
+        }
+        article:not(:last-child) {
+            border-right: none;
+        }
+        article header {
+            color: rgb(150,150,150);
+            background-color: rgb(45,45,45);
+            font-weight: bold;
+            padding: 8px;
+            margin: 0px;
+            border-bottom: var(--border);
+        }
+        article header:hover {
+            display: flex;
+            flex-direction: column;
+        }
+        article p {
+            padding: 0px 8px;
+            white-space: pre;
+        }
+        ins {
+            color: lightgreen;
+            text-decoration: none;
+        }
+        del {
+            color: red;
+            text-decoration: none;
+        }
+        </style>
+    </head>
+    <body onclick="location.reload(true)">
+
+        <article>
+            <header><span>input</span></header>
+            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-unchanged" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><div class="jsondiffpatch-value"><pre>{
+  &quot;sample.Point&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: {
+      &quot;type&quot;: &quot;ClassDeclaration&quot;,
+      &quot;kind&quot;: &quot;class&quot;,
+      &quot;id&quot;: {
+        &quot;type&quot;: &quot;IdDeclaration&quot;,
+        &quot;name&quot;: &quot;Point&quot;
+      },
+      &quot;typeParameters&quot;: null,
+      &quot;baseClasses&quot;: [],
+      &quot;variables&quot;: [
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;var&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;x&quot;
+              },
+              &quot;valueType&quot;: {
+                &quot;type&quot;: &quot;TypeReference&quot;,
+                &quot;arguments&quot;: null,
+                &quot;name&quot;: &quot;Number&quot;
+              },
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 0,
+                &quot;base&quot;: 10
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;var&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;y&quot;
+              },
+              &quot;valueType&quot;: {
+                &quot;type&quot;: &quot;TypeReference&quot;,
+                &quot;arguments&quot;: null,
+                &quot;name&quot;: &quot;Number&quot;
+              },
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 0,
+                &quot;base&quot;: 10
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;let&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;z&quot;
+              },
+              &quot;valueType&quot;: null,
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;BinaryExpression&quot;,
+                &quot;operator&quot;: &quot;+&quot;,
+                &quot;left&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;x&quot;
+                },
+                &quot;right&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;y&quot;
+                }
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;let&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;translate&quot;
+              },
+              &quot;valueType&quot;: null,
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;FunctionExpression&quot;,
+                &quot;body&quot;: {
+                  &quot;type&quot;: &quot;BlockStatement&quot;,
+                  &quot;body&quot;: [
+                    {
+                      &quot;type&quot;: &quot;IfStatement&quot;,
+                      &quot;test&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;x&quot;
+                      },
+                      &quot;consequent&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;ReturnStatement&quot;,
+                            &quot;argument&quot;: {
+                              &quot;type&quot;: &quot;Literal&quot;,
+                              &quot;value&quot;: 0,
+                              &quot;base&quot;: 10
+                            }
+                          }
+                        ]
+                      },
+                      &quot;alternate&quot;: {
+                        &quot;type&quot;: &quot;IfStatement&quot;,
+                        &quot;test&quot;: {
+                          &quot;type&quot;: &quot;IdReference&quot;,
+                          &quot;name&quot;: &quot;y&quot;
+                        },
+                        &quot;consequent&quot;: {
+                          &quot;type&quot;: &quot;BlockStatement&quot;,
+                          &quot;body&quot;: [
+                            {
+                              &quot;type&quot;: &quot;ReturnStatement&quot;,
+                              &quot;argument&quot;: {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 1,
+                                &quot;base&quot;: 10
+                              }
+                            }
+                          ]
+                        },
+                        &quot;alternate&quot;: {
+                          &quot;type&quot;: &quot;BlockStatement&quot;,
+                          &quot;body&quot;: [
+                            {
+                              &quot;type&quot;: &quot;ReturnStatement&quot;,
+                              &quot;argument&quot;: {
+                                &quot;type&quot;: &quot;UnaryExpression&quot;,
+                                &quot;operator&quot;: &quot;-&quot;,
+                                &quot;argument&quot;: {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: 1,
+                                  &quot;base&quot;: 10
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;temp&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: null
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;ForInStatement&quot;,
+                      &quot;left&quot;: {
+                        &quot;type&quot;: &quot;ObjectPattern&quot;,
+                        &quot;properties&quot;: [
+                          {
+                            &quot;type&quot;: &quot;Property&quot;,
+                            &quot;key&quot;: {
+                              &quot;type&quot;: &quot;Id&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            },
+                            &quot;value&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            },
+                            &quot;kind&quot;: &quot;init&quot;,
+                            &quot;shorthand&quot;: true
+                          },
+                          {
+                            &quot;type&quot;: &quot;Property&quot;,
+                            &quot;key&quot;: {
+                              &quot;type&quot;: &quot;Id&quot;,
+                              &quot;name&quot;: &quot;bar&quot;
+                            },
+                            &quot;value&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;bar&quot;
+                            },
+                            &quot;kind&quot;: &quot;init&quot;,
+                            &quot;shorthand&quot;: true
+                          }
+                        ]
+                      },
+                      &quot;index&quot;: null,
+                      &quot;right&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;map&quot;
+                      },
+                      &quot;body&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;AssignmentStatement&quot;,
+                            &quot;left&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;temp&quot;
+                            },
+                            &quot;right&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            }
+                          },
+                          {
+                            &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                            &quot;expression&quot;: {
+                              &quot;type&quot;: &quot;CallExpression&quot;,
+                              &quot;callee&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;log&quot;
+                              },
+                              &quot;arguments&quot;: [
+                                {
+                                  &quot;type&quot;: &quot;IdReference&quot;,
+                                  &quot;name&quot;: &quot;x&quot;
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;WhileStatement&quot;,
+                      &quot;test&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;true&quot;
+                      },
+                      &quot;body&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                            &quot;expression&quot;: {
+                              &quot;type&quot;: &quot;CallExpression&quot;,
+                              &quot;callee&quot;: {
+                                &quot;type&quot;: &quot;MemberExpression&quot;,
+                                &quot;object&quot;: {
+                                  &quot;type&quot;: &quot;IdReference&quot;,
+                                  &quot;name&quot;: &quot;console&quot;
+                                },
+                                &quot;property&quot;: {
+                                  &quot;type&quot;: &quot;Id&quot;,
+                                  &quot;name&quot;: &quot;log&quot;
+                                },
+                                &quot;computed&quot;: false
+                              },
+                              &quot;arguments&quot;: [
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;hello&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;world&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;ion&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;rocks&quot;
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;foo&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: {
+                            &quot;type&quot;: &quot;CallExpression&quot;,
+                            &quot;callee&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;Foo&quot;
+                            },
+                            &quot;arguments&quot;: [
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 1,
+                                &quot;base&quot;: 10
+                              },
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 2,
+                                &quot;base&quot;: 10
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;bar&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: {
+                            &quot;type&quot;: &quot;CallExpression&quot;,
+                            &quot;callee&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;baz&quot;
+                            },
+                            &quot;arguments&quot;: [
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 3,
+                                &quot;base&quot;: 10
+                              },
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 4,
+                                &quot;base&quot;: 10
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                      &quot;expression&quot;: {
+                        &quot;type&quot;: &quot;BinaryExpression&quot;,
+                        &quot;operator&quot;: &quot;or&quot;,
+                        &quot;left&quot;: {
+                          &quot;type&quot;: &quot;BinaryExpression&quot;,
+                          &quot;operator&quot;: &quot;xor&quot;,
+                          &quot;left&quot;: {
+                            &quot;type&quot;: &quot;BinaryExpression&quot;,
+                            &quot;operator&quot;: &quot;or&quot;,
+                            &quot;left&quot;: {
+                              &quot;type&quot;: &quot;BinaryExpression&quot;,
+                              &quot;operator&quot;: &quot;and&quot;,
+                              &quot;left&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;a&quot;
+                              },
+                              &quot;right&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;b&quot;
+                              }
+                            },
+                            &quot;right&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;c&quot;
+                            }
+                          },
+                          &quot;right&quot;: {
+                            &quot;type&quot;: &quot;IdReference&quot;,
+                            &quot;name&quot;: &quot;d&quot;
+                          }
+                        },
+                        &quot;right&quot;: {
+                          &quot;type&quot;: &quot;UnaryExpression&quot;,
+                          &quot;operator&quot;: &quot;not&quot;,
+                          &quot;argument&quot;: {
+                            &quot;type&quot;: &quot;IdReference&quot;,
+                            &quot;name&quot;: &quot;e&quot;
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                &quot;id&quot;: null,
+                &quot;params&quot;: []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  &quot;sample.Sample1&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: [
+      {
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;type&quot;: &quot;IdDeclaration&quot;,
+              &quot;name&quot;: &quot;a&quot;
+            },
+            &quot;valueType&quot;: null,
+            &quot;init&quot;: {
+              &quot;type&quot;: &quot;Literal&quot;,
+              &quot;value&quot;: 1,
+              &quot;base&quot;: 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  &quot;sample.Sample2&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: [
+      {
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;type&quot;: &quot;IdDeclaration&quot;,
+              &quot;name&quot;: &quot;b&quot;
+            },
+            &quot;valueType&quot;: null,
+            &quot;init&quot;: {
+              &quot;type&quot;: &quot;BinaryExpression&quot;,
+              &quot;operator&quot;: &quot;*&quot;,
+              &quot;left&quot;: {
+                &quot;type&quot;: &quot;MemberExpression&quot;,
+                &quot;object&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;Sample1&quot;
+                },
+                &quot;property&quot;: {
+                  &quot;type&quot;: &quot;Id&quot;,
+                  &quot;name&quot;: &quot;a&quot;
+                },
+                &quot;computed&quot;: false
+              },
+              &quot;right&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 2,
+                &quot;base&quot;: 10
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
+  &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
+  &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Assembly&quot;</pre></div></li></ul></div></p>
+        </article>
+    
+        <article>
+            <header><span></span></header>
+            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-unchanged" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><div class="jsondiffpatch-value"><pre>{
+  &quot;sample.Point&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: {
+      &quot;type&quot;: &quot;ClassDeclaration&quot;,
+      &quot;kind&quot;: &quot;class&quot;,
+      &quot;id&quot;: {
+        &quot;type&quot;: &quot;IdDeclaration&quot;,
+        &quot;name&quot;: &quot;Point&quot;
+      },
+      &quot;typeParameters&quot;: null,
+      &quot;baseClasses&quot;: [],
+      &quot;variables&quot;: [
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;var&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;x&quot;
+              },
+              &quot;valueType&quot;: {
+                &quot;type&quot;: &quot;TypeReference&quot;,
+                &quot;arguments&quot;: null,
+                &quot;name&quot;: &quot;Number&quot;
+              },
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 0,
+                &quot;base&quot;: 10
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;var&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;y&quot;
+              },
+              &quot;valueType&quot;: {
+                &quot;type&quot;: &quot;TypeReference&quot;,
+                &quot;arguments&quot;: null,
+                &quot;name&quot;: &quot;Number&quot;
+              },
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 0,
+                &quot;base&quot;: 10
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;let&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;z&quot;
+              },
+              &quot;valueType&quot;: null,
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;BinaryExpression&quot;,
+                &quot;operator&quot;: &quot;+&quot;,
+                &quot;left&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;x&quot;
+                },
+                &quot;right&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;y&quot;
+                }
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;let&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;translate&quot;
+              },
+              &quot;valueType&quot;: null,
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;FunctionExpression&quot;,
+                &quot;body&quot;: {
+                  &quot;type&quot;: &quot;BlockStatement&quot;,
+                  &quot;body&quot;: [
+                    {
+                      &quot;type&quot;: &quot;IfStatement&quot;,
+                      &quot;test&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;x&quot;
+                      },
+                      &quot;consequent&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;ReturnStatement&quot;,
+                            &quot;argument&quot;: {
+                              &quot;type&quot;: &quot;Literal&quot;,
+                              &quot;value&quot;: 0,
+                              &quot;base&quot;: 10
+                            }
+                          }
+                        ]
+                      },
+                      &quot;alternate&quot;: {
+                        &quot;type&quot;: &quot;IfStatement&quot;,
+                        &quot;test&quot;: {
+                          &quot;type&quot;: &quot;IdReference&quot;,
+                          &quot;name&quot;: &quot;y&quot;
+                        },
+                        &quot;consequent&quot;: {
+                          &quot;type&quot;: &quot;BlockStatement&quot;,
+                          &quot;body&quot;: [
+                            {
+                              &quot;type&quot;: &quot;ReturnStatement&quot;,
+                              &quot;argument&quot;: {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 1,
+                                &quot;base&quot;: 10
+                              }
+                            }
+                          ]
+                        },
+                        &quot;alternate&quot;: {
+                          &quot;type&quot;: &quot;BlockStatement&quot;,
+                          &quot;body&quot;: [
+                            {
+                              &quot;type&quot;: &quot;ReturnStatement&quot;,
+                              &quot;argument&quot;: {
+                                &quot;type&quot;: &quot;UnaryExpression&quot;,
+                                &quot;operator&quot;: &quot;-&quot;,
+                                &quot;argument&quot;: {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: 1,
+                                  &quot;base&quot;: 10
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;temp&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: null
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;ForInStatement&quot;,
+                      &quot;left&quot;: {
+                        &quot;type&quot;: &quot;ObjectPattern&quot;,
+                        &quot;properties&quot;: [
+                          {
+                            &quot;type&quot;: &quot;Property&quot;,
+                            &quot;key&quot;: {
+                              &quot;type&quot;: &quot;Id&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            },
+                            &quot;value&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            },
+                            &quot;kind&quot;: &quot;init&quot;,
+                            &quot;shorthand&quot;: true
+                          },
+                          {
+                            &quot;type&quot;: &quot;Property&quot;,
+                            &quot;key&quot;: {
+                              &quot;type&quot;: &quot;Id&quot;,
+                              &quot;name&quot;: &quot;bar&quot;
+                            },
+                            &quot;value&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;bar&quot;
+                            },
+                            &quot;kind&quot;: &quot;init&quot;,
+                            &quot;shorthand&quot;: true
+                          }
+                        ]
+                      },
+                      &quot;index&quot;: null,
+                      &quot;right&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;map&quot;
+                      },
+                      &quot;body&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;AssignmentStatement&quot;,
+                            &quot;left&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;temp&quot;
+                            },
+                            &quot;right&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            }
+                          },
+                          {
+                            &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                            &quot;expression&quot;: {
+                              &quot;type&quot;: &quot;CallExpression&quot;,
+                              &quot;callee&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;log&quot;
+                              },
+                              &quot;arguments&quot;: [
+                                {
+                                  &quot;type&quot;: &quot;IdReference&quot;,
+                                  &quot;name&quot;: &quot;x&quot;
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;WhileStatement&quot;,
+                      &quot;test&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;true&quot;
+                      },
+                      &quot;body&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                            &quot;expression&quot;: {
+                              &quot;type&quot;: &quot;CallExpression&quot;,
+                              &quot;callee&quot;: {
+                                &quot;type&quot;: &quot;MemberExpression&quot;,
+                                &quot;object&quot;: {
+                                  &quot;type&quot;: &quot;IdReference&quot;,
+                                  &quot;name&quot;: &quot;console&quot;
+                                },
+                                &quot;property&quot;: {
+                                  &quot;type&quot;: &quot;Id&quot;,
+                                  &quot;name&quot;: &quot;log&quot;
+                                },
+                                &quot;computed&quot;: false
+                              },
+                              &quot;arguments&quot;: [
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;hello&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;world&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;ion&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;rocks&quot;
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;foo&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: {
+                            &quot;type&quot;: &quot;CallExpression&quot;,
+                            &quot;callee&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;Foo&quot;
+                            },
+                            &quot;arguments&quot;: [
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 1,
+                                &quot;base&quot;: 10
+                              },
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 2,
+                                &quot;base&quot;: 10
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;bar&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: {
+                            &quot;type&quot;: &quot;CallExpression&quot;,
+                            &quot;callee&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;baz&quot;
+                            },
+                            &quot;arguments&quot;: [
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 3,
+                                &quot;base&quot;: 10
+                              },
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 4,
+                                &quot;base&quot;: 10
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                      &quot;expression&quot;: {
+                        &quot;type&quot;: &quot;BinaryExpression&quot;,
+                        &quot;operator&quot;: &quot;or&quot;,
+                        &quot;left&quot;: {
+                          &quot;type&quot;: &quot;BinaryExpression&quot;,
+                          &quot;operator&quot;: &quot;xor&quot;,
+                          &quot;left&quot;: {
+                            &quot;type&quot;: &quot;BinaryExpression&quot;,
+                            &quot;operator&quot;: &quot;or&quot;,
+                            &quot;left&quot;: {
+                              &quot;type&quot;: &quot;BinaryExpression&quot;,
+                              &quot;operator&quot;: &quot;and&quot;,
+                              &quot;left&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;a&quot;
+                              },
+                              &quot;right&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;b&quot;
+                              }
+                            },
+                            &quot;right&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;c&quot;
+                            }
+                          },
+                          &quot;right&quot;: {
+                            &quot;type&quot;: &quot;IdReference&quot;,
+                            &quot;name&quot;: &quot;d&quot;
+                          }
+                        },
+                        &quot;right&quot;: {
+                          &quot;type&quot;: &quot;UnaryExpression&quot;,
+                          &quot;operator&quot;: &quot;not&quot;,
+                          &quot;argument&quot;: {
+                            &quot;type&quot;: &quot;IdReference&quot;,
+                            &quot;name&quot;: &quot;e&quot;
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                &quot;id&quot;: null,
+                &quot;params&quot;: []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  &quot;sample.Sample1&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: [
+      {
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;type&quot;: &quot;IdDeclaration&quot;,
+              &quot;name&quot;: &quot;a&quot;
+            },
+            &quot;valueType&quot;: null,
+            &quot;init&quot;: {
+              &quot;type&quot;: &quot;Literal&quot;,
+              &quot;value&quot;: 1,
+              &quot;base&quot;: 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  &quot;sample.Sample2&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: [
+      {
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;type&quot;: &quot;IdDeclaration&quot;,
+              &quot;name&quot;: &quot;b&quot;
+            },
+            &quot;valueType&quot;: null,
+            &quot;init&quot;: {
+              &quot;type&quot;: &quot;BinaryExpression&quot;,
+              &quot;operator&quot;: &quot;*&quot;,
+              &quot;left&quot;: {
+                &quot;type&quot;: &quot;MemberExpression&quot;,
+                &quot;object&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;Sample1&quot;
+                },
+                &quot;property&quot;: {
+                  &quot;type&quot;: &quot;Id&quot;,
+                  &quot;name&quot;: &quot;a&quot;
+                },
+                &quot;computed&quot;: false
+              },
+              &quot;right&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 2,
+                &quot;base&quot;: 10
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
+  &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
+  &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Assembly&quot;</pre></div></li></ul></div></p>
+        </article>
+    
+        <article>
+            <header><span>output</span></header>
+            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-unchanged" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><div class="jsondiffpatch-value"><pre>{
+  &quot;sample.Point&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: {
+      &quot;type&quot;: &quot;ClassDeclaration&quot;,
+      &quot;kind&quot;: &quot;class&quot;,
+      &quot;id&quot;: {
+        &quot;type&quot;: &quot;IdDeclaration&quot;,
+        &quot;name&quot;: &quot;Point&quot;
+      },
+      &quot;typeParameters&quot;: null,
+      &quot;baseClasses&quot;: [],
+      &quot;variables&quot;: [
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;var&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;x&quot;
+              },
+              &quot;valueType&quot;: {
+                &quot;type&quot;: &quot;TypeReference&quot;,
+                &quot;arguments&quot;: null,
+                &quot;name&quot;: &quot;Number&quot;
+              },
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 0,
+                &quot;base&quot;: 10
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;var&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;y&quot;
+              },
+              &quot;valueType&quot;: {
+                &quot;type&quot;: &quot;TypeReference&quot;,
+                &quot;arguments&quot;: null,
+                &quot;name&quot;: &quot;Number&quot;
+              },
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 0,
+                &quot;base&quot;: 10
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;let&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;z&quot;
+              },
+              &quot;valueType&quot;: null,
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;BinaryExpression&quot;,
+                &quot;operator&quot;: &quot;+&quot;,
+                &quot;left&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;x&quot;
+                },
+                &quot;right&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;y&quot;
+                }
+              }
+            }
+          ]
+        },
+        {
+          &quot;type&quot;: &quot;VariableDeclaration&quot;,
+          &quot;kind&quot;: &quot;let&quot;,
+          &quot;declarations&quot;: [
+            {
+              &quot;type&quot;: &quot;VariableDeclarator&quot;,
+              &quot;id&quot;: {
+                &quot;type&quot;: &quot;IdDeclaration&quot;,
+                &quot;name&quot;: &quot;translate&quot;
+              },
+              &quot;valueType&quot;: null,
+              &quot;init&quot;: {
+                &quot;type&quot;: &quot;FunctionExpression&quot;,
+                &quot;body&quot;: {
+                  &quot;type&quot;: &quot;BlockStatement&quot;,
+                  &quot;body&quot;: [
+                    {
+                      &quot;type&quot;: &quot;IfStatement&quot;,
+                      &quot;test&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;x&quot;
+                      },
+                      &quot;consequent&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;ReturnStatement&quot;,
+                            &quot;argument&quot;: {
+                              &quot;type&quot;: &quot;Literal&quot;,
+                              &quot;value&quot;: 0,
+                              &quot;base&quot;: 10
+                            }
+                          }
+                        ]
+                      },
+                      &quot;alternate&quot;: {
+                        &quot;type&quot;: &quot;IfStatement&quot;,
+                        &quot;test&quot;: {
+                          &quot;type&quot;: &quot;IdReference&quot;,
+                          &quot;name&quot;: &quot;y&quot;
+                        },
+                        &quot;consequent&quot;: {
+                          &quot;type&quot;: &quot;BlockStatement&quot;,
+                          &quot;body&quot;: [
+                            {
+                              &quot;type&quot;: &quot;ReturnStatement&quot;,
+                              &quot;argument&quot;: {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 1,
+                                &quot;base&quot;: 10
+                              }
+                            }
+                          ]
+                        },
+                        &quot;alternate&quot;: {
+                          &quot;type&quot;: &quot;BlockStatement&quot;,
+                          &quot;body&quot;: [
+                            {
+                              &quot;type&quot;: &quot;ReturnStatement&quot;,
+                              &quot;argument&quot;: {
+                                &quot;type&quot;: &quot;UnaryExpression&quot;,
+                                &quot;operator&quot;: &quot;-&quot;,
+                                &quot;argument&quot;: {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: 1,
+                                  &quot;base&quot;: 10
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;temp&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: null
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;ForInStatement&quot;,
+                      &quot;left&quot;: {
+                        &quot;type&quot;: &quot;ObjectPattern&quot;,
+                        &quot;properties&quot;: [
+                          {
+                            &quot;type&quot;: &quot;Property&quot;,
+                            &quot;key&quot;: {
+                              &quot;type&quot;: &quot;Id&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            },
+                            &quot;value&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            },
+                            &quot;kind&quot;: &quot;init&quot;,
+                            &quot;shorthand&quot;: true
+                          },
+                          {
+                            &quot;type&quot;: &quot;Property&quot;,
+                            &quot;key&quot;: {
+                              &quot;type&quot;: &quot;Id&quot;,
+                              &quot;name&quot;: &quot;bar&quot;
+                            },
+                            &quot;value&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;bar&quot;
+                            },
+                            &quot;kind&quot;: &quot;init&quot;,
+                            &quot;shorthand&quot;: true
+                          }
+                        ]
+                      },
+                      &quot;index&quot;: null,
+                      &quot;right&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;map&quot;
+                      },
+                      &quot;body&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;AssignmentStatement&quot;,
+                            &quot;left&quot;: {
+                              &quot;type&quot;: &quot;IdDeclaration&quot;,
+                              &quot;name&quot;: &quot;temp&quot;
+                            },
+                            &quot;right&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;foo&quot;
+                            }
+                          },
+                          {
+                            &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                            &quot;expression&quot;: {
+                              &quot;type&quot;: &quot;CallExpression&quot;,
+                              &quot;callee&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;log&quot;
+                              },
+                              &quot;arguments&quot;: [
+                                {
+                                  &quot;type&quot;: &quot;IdReference&quot;,
+                                  &quot;name&quot;: &quot;x&quot;
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;WhileStatement&quot;,
+                      &quot;test&quot;: {
+                        &quot;type&quot;: &quot;IdReference&quot;,
+                        &quot;name&quot;: &quot;true&quot;
+                      },
+                      &quot;body&quot;: {
+                        &quot;type&quot;: &quot;BlockStatement&quot;,
+                        &quot;body&quot;: [
+                          {
+                            &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                            &quot;expression&quot;: {
+                              &quot;type&quot;: &quot;CallExpression&quot;,
+                              &quot;callee&quot;: {
+                                &quot;type&quot;: &quot;MemberExpression&quot;,
+                                &quot;object&quot;: {
+                                  &quot;type&quot;: &quot;IdReference&quot;,
+                                  &quot;name&quot;: &quot;console&quot;
+                                },
+                                &quot;property&quot;: {
+                                  &quot;type&quot;: &quot;Id&quot;,
+                                  &quot;name&quot;: &quot;log&quot;
+                                },
+                                &quot;computed&quot;: false
+                              },
+                              &quot;arguments&quot;: [
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;hello&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;world&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;ion&quot;
+                                },
+                                {
+                                  &quot;type&quot;: &quot;Literal&quot;,
+                                  &quot;value&quot;: &quot;rocks&quot;
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;foo&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: {
+                            &quot;type&quot;: &quot;CallExpression&quot;,
+                            &quot;callee&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;Foo&quot;
+                            },
+                            &quot;arguments&quot;: [
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 1,
+                                &quot;base&quot;: 10
+                              },
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 2,
+                                &quot;base&quot;: 10
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;VariableDeclaration&quot;,
+                      &quot;kind&quot;: &quot;let&quot;,
+                      &quot;declarations&quot;: [
+                        {
+                          &quot;type&quot;: &quot;VariableDeclarator&quot;,
+                          &quot;id&quot;: {
+                            &quot;type&quot;: &quot;IdDeclaration&quot;,
+                            &quot;name&quot;: &quot;bar&quot;
+                          },
+                          &quot;valueType&quot;: null,
+                          &quot;init&quot;: {
+                            &quot;type&quot;: &quot;CallExpression&quot;,
+                            &quot;callee&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;baz&quot;
+                            },
+                            &quot;arguments&quot;: [
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 3,
+                                &quot;base&quot;: 10
+                              },
+                              {
+                                &quot;type&quot;: &quot;Literal&quot;,
+                                &quot;value&quot;: 4,
+                                &quot;base&quot;: 10
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      &quot;type&quot;: &quot;ExpressionStatement&quot;,
+                      &quot;expression&quot;: {
+                        &quot;type&quot;: &quot;BinaryExpression&quot;,
+                        &quot;operator&quot;: &quot;or&quot;,
+                        &quot;left&quot;: {
+                          &quot;type&quot;: &quot;BinaryExpression&quot;,
+                          &quot;operator&quot;: &quot;xor&quot;,
+                          &quot;left&quot;: {
+                            &quot;type&quot;: &quot;BinaryExpression&quot;,
+                            &quot;operator&quot;: &quot;or&quot;,
+                            &quot;left&quot;: {
+                              &quot;type&quot;: &quot;BinaryExpression&quot;,
+                              &quot;operator&quot;: &quot;and&quot;,
+                              &quot;left&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;a&quot;
+                              },
+                              &quot;right&quot;: {
+                                &quot;type&quot;: &quot;IdReference&quot;,
+                                &quot;name&quot;: &quot;b&quot;
+                              }
+                            },
+                            &quot;right&quot;: {
+                              &quot;type&quot;: &quot;IdReference&quot;,
+                              &quot;name&quot;: &quot;c&quot;
+                            }
+                          },
+                          &quot;right&quot;: {
+                            &quot;type&quot;: &quot;IdReference&quot;,
+                            &quot;name&quot;: &quot;d&quot;
+                          }
+                        },
+                        &quot;right&quot;: {
+                          &quot;type&quot;: &quot;UnaryExpression&quot;,
+                          &quot;operator&quot;: &quot;not&quot;,
+                          &quot;argument&quot;: {
+                            &quot;type&quot;: &quot;IdReference&quot;,
+                            &quot;name&quot;: &quot;e&quot;
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                &quot;id&quot;: null,
+                &quot;params&quot;: []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  &quot;sample.Sample1&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: [
+      {
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;type&quot;: &quot;IdDeclaration&quot;,
+              &quot;name&quot;: &quot;a&quot;
+            },
+            &quot;valueType&quot;: null,
+            &quot;init&quot;: {
+              &quot;type&quot;: &quot;Literal&quot;,
+              &quot;value&quot;: 1,
+              &quot;base&quot;: 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  &quot;sample.Sample2&quot;: {
+    &quot;type&quot;: &quot;Module&quot;,
+    &quot;imports&quot;: [],
+    &quot;declarations&quot;: [],
+    &quot;exports&quot;: [
+      {
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;type&quot;: &quot;IdDeclaration&quot;,
+              &quot;name&quot;: &quot;b&quot;
+            },
+            &quot;valueType&quot;: null,
+            &quot;init&quot;: {
+              &quot;type&quot;: &quot;BinaryExpression&quot;,
+              &quot;operator&quot;: &quot;*&quot;,
+              &quot;left&quot;: {
+                &quot;type&quot;: &quot;MemberExpression&quot;,
+                &quot;object&quot;: {
+                  &quot;type&quot;: &quot;IdReference&quot;,
+                  &quot;name&quot;: &quot;Sample1&quot;
+                },
+                &quot;property&quot;: {
+                  &quot;type&quot;: &quot;Id&quot;,
+                  &quot;name&quot;: &quot;a&quot;
+                },
+                &quot;computed&quot;: false
+              },
+              &quot;right&quot;: {
+                &quot;type&quot;: &quot;Literal&quot;,
+                &quot;value&quot;: 2,
+                &quot;base&quot;: 10
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
+  &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
+  &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Assembly&quot;</pre></div></li></ul></div></p>
+        </article>
+    
+    </body>
+</html>

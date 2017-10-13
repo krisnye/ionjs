@@ -1,0 +1,36 @@
+{
+    "name": "ionjs",
+    "version": "0.0.1",
+    "main": "lib/index",
+    "repository": "https://github.com/krisnye/ionjs.git",
+    "bin": "lib/command.js",
+    "scripts": {
+        "dev": "npm link pegs && yarn install && mkdir -p lib",
+        "build": "pegs src/parser.pegs lib/parser.js && tsc -p .",
+        "watch": "nodemon -w src/parser.pegs -x pegs src/parser.pegs lib/parser.js & tsc -p . --watch & yarn watchTest",
+        "watchTest": "nodemon -w lib -w test -e js,ion lib/command.js test",
+        "debug": "yarn build && node --inspect-brk lib/command.js test"
+    },
+    "author": {
+        "name": "Kris Nye",
+        "email": "krisnye@gmail.com"
+    },
+    "contributors": [
+        {
+            "name": "Kody King",
+            "email": "kody.j.king@gmail.com"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/krisnye/ionjs/issues"
+    },
+    "homepage": "https://github.com/krisnye/ionjs",
+    "devDependencies": {
+        "text-diff": "^1.0.1",
+        "@types/escodegen": "^0.0.6",
+        "@types/node": "^7.0.22",
+        "escodegen": "^1.8.1",
+        "jsondiffpatch": "^0.2.4",
+        "pegs": "*"
+    }
+}
