@@ -65,11 +65,91 @@
           {
             &quot;location&quot;: null,
             &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+            &quot;relative&quot;: 1,
             &quot;path&quot;: [
               {
                 &quot;location&quot;: null,
                 &quot;type&quot;: &quot;Identifier&quot;,
                 &quot;name&quot;: &quot;glass&quot;
+              }
+            ],
+            &quot;children&quot;: [
+              {
+                &quot;location&quot;: null,
+                &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+                &quot;relative&quot;: 0,
+                &quot;path&quot;: [
+                  {
+                    &quot;location&quot;: null,
+                    &quot;type&quot;: &quot;Identifier&quot;,
+                    &quot;name&quot;: &quot;data&quot;
+                  }
+                ],
+                &quot;children&quot;: null,
+                &quot;as&quot;: null
+              },
+              {
+                &quot;location&quot;: null,
+                &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+                &quot;relative&quot;: 0,
+                &quot;path&quot;: [
+                  {
+                    &quot;location&quot;: null,
+                    &quot;type&quot;: &quot;Identifier&quot;,
+                    &quot;name&quot;: &quot;time&quot;
+                  }
+                ],
+                &quot;children&quot;: null,
+                &quot;as&quot;: null
+              },
+              {
+                &quot;location&quot;: null,
+                &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+                &quot;relative&quot;: 0,
+                &quot;path&quot;: [
+                  {
+                    &quot;location&quot;: null,
+                    &quot;type&quot;: &quot;Literal&quot;,
+                    &quot;value&quot;: &quot;weird-name&quot;
+                  }
+                ],
+                &quot;children&quot;: null,
+                &quot;as&quot;: {
+                  &quot;location&quot;: null,
+                  &quot;type&quot;: &quot;Identifier&quot;,
+                  &quot;name&quot;: &quot;weird&quot;
+                }
+              }
+            ],
+            &quot;as&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;g&quot;
+            }
+          },
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+            &quot;relative&quot;: 2,
+            &quot;path&quot;: [
+              {
+                &quot;location&quot;: null,
+                &quot;type&quot;: &quot;Identifier&quot;,
+                &quot;name&quot;: &quot;parent&quot;
+              }
+            ],
+            &quot;children&quot;: null,
+            &quot;as&quot;: null
+          },
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+            &quot;relative&quot;: 3,
+            &quot;path&quot;: [
+              {
+                &quot;location&quot;: null,
+                &quot;type&quot;: &quot;Identifier&quot;,
+                &quot;name&quot;: &quot;grandparent&quot;
               }
             ],
             &quot;children&quot;: null,
@@ -87,24 +167,209 @@
     
         <article>
             <header><span>ImportDeclarations_toJavascript</span></header>
-            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-object" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-object" data-key="sample.Sample1"><div class="jsondiffpatch-property-name">sample.Sample1</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-array" data-key="body"><div class="jsondiffpatch-property-name">body</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-array"><li class="jsondiffpatch-deleted" data-key="0"><div class="jsondiffpatch-property-name">0</div><div class="jsondiffpatch-value"><pre>{
-  &quot;location&quot;: null,
-  &quot;type&quot;: &quot;ImportDeclarations&quot;,
-  &quot;declarations&quot;: [
-    {
-      &quot;location&quot;: null,
-      &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
-      &quot;path&quot;: [
-        {
+            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-object" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-object" data-key="sample.Sample1"><div class="jsondiffpatch-property-name">sample.Sample1</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-array" data-key="body"><div class="jsondiffpatch-property-name">body</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-array"><li class="jsondiffpatch-node jsondiffpatch-child-node-type-object" data-key="0"><div class="jsondiffpatch-property-name">0</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-deleted" data-key="declarations"><div class="jsondiffpatch-property-name">declarations</div><div class="jsondiffpatch-value"><pre>[
+  {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+    &quot;relative&quot;: 1,
+    &quot;path&quot;: [
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;glass&quot;
+      }
+    ],
+    &quot;children&quot;: [
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+        &quot;relative&quot;: 0,
+        &quot;path&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;Identifier&quot;,
+            &quot;name&quot;: &quot;data&quot;
+          }
+        ],
+        &quot;children&quot;: null,
+        &quot;as&quot;: null
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+        &quot;relative&quot;: 0,
+        &quot;path&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;Identifier&quot;,
+            &quot;name&quot;: &quot;time&quot;
+          }
+        ],
+        &quot;children&quot;: null,
+        &quot;as&quot;: null
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+        &quot;relative&quot;: 0,
+        &quot;path&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;Literal&quot;,
+            &quot;value&quot;: &quot;weird-name&quot;
+          }
+        ],
+        &quot;children&quot;: null,
+        &quot;as&quot;: {
           &quot;location&quot;: null,
           &quot;type&quot;: &quot;Identifier&quot;,
-          &quot;name&quot;: &quot;glass&quot;
+          &quot;name&quot;: &quot;weird&quot;
         }
-      ],
-      &quot;children&quot;: null,
-      &quot;as&quot;: null
+      }
+    ],
+    &quot;as&quot;: {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;Identifier&quot;,
+      &quot;name&quot;: &quot;g&quot;
     }
-  ]
+  },
+  {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+    &quot;relative&quot;: 2,
+    &quot;path&quot;: [
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;parent&quot;
+      }
+    ],
+    &quot;children&quot;: null,
+    &quot;as&quot;: null
+  },
+  {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;ImportSubDeclaration&quot;,
+    &quot;relative&quot;: 3,
+    &quot;path&quot;: [
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;grandparent&quot;
+      }
+    ],
+    &quot;children&quot;: null,
+    &quot;as&quot;: null
+  }
+]</pre></div></li><li class="jsondiffpatch-unchanged" data-key="location"><div class="jsondiffpatch-property-name">location</div><div class="jsondiffpatch-value"><pre>null</pre></div></li><li class="jsondiffpatch-added" data-key="source"><div class="jsondiffpatch-property-name">source</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;Literal&quot;,
+  &quot;value&quot;: &quot;./glass&quot;
+}</pre></div></li><li class="jsondiffpatch-added" data-key="specifiers"><div class="jsondiffpatch-property-name">specifiers</div><div class="jsondiffpatch-value"><pre>[
+  {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+    &quot;local&quot;: {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;Identifier&quot;,
+      &quot;name&quot;: &quot;g&quot;
+    }
+  }
+]</pre></div></li><li class="jsondiffpatch-modified" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value jsondiffpatch-left-value"><pre>&quot;ImportDeclarations&quot;</pre></div><div class="jsondiffpatch-value jsondiffpatch-right-value"><pre>&quot;ImportDeclaration&quot;</pre></div></li></ul></li><li class="jsondiffpatch-added" data-key="1"><div class="jsondiffpatch-property-name">1</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;ImportDeclaration&quot;,
+  &quot;specifiers&quot;: [
+    {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+      &quot;local&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;data&quot;
+      }
+    }
+  ],
+  &quot;source&quot;: {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;Literal&quot;,
+    &quot;value&quot;: &quot;./glass/data&quot;
+  }
+}</pre></div></li><li class="jsondiffpatch-added" data-key="2"><div class="jsondiffpatch-property-name">2</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;ImportDeclaration&quot;,
+  &quot;specifiers&quot;: [
+    {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+      &quot;local&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;time&quot;
+      }
+    }
+  ],
+  &quot;source&quot;: {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;Literal&quot;,
+    &quot;value&quot;: &quot;./glass/time&quot;
+  }
+}</pre></div></li><li class="jsondiffpatch-added" data-key="3"><div class="jsondiffpatch-property-name">3</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;ImportDeclaration&quot;,
+  &quot;specifiers&quot;: [
+    {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+      &quot;local&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;weird&quot;
+      }
+    }
+  ],
+  &quot;source&quot;: {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;Literal&quot;,
+    &quot;value&quot;: &quot;./glass/weird-name&quot;
+  }
+}</pre></div></li><li class="jsondiffpatch-added" data-key="4"><div class="jsondiffpatch-property-name">4</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;ImportDeclaration&quot;,
+  &quot;specifiers&quot;: [
+    {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+      &quot;local&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;parent&quot;
+      }
+    }
+  ],
+  &quot;source&quot;: {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;Literal&quot;,
+    &quot;value&quot;: &quot;../parent&quot;
+  }
+}</pre></div></li><li class="jsondiffpatch-added" data-key="5"><div class="jsondiffpatch-property-name">5</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;ImportDeclaration&quot;,
+  &quot;specifiers&quot;: [
+    {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+      &quot;local&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;grandparent&quot;
+      }
+    }
+  ],
+  &quot;source&quot;: {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;Literal&quot;,
+    &quot;value&quot;: &quot;../../grandparent&quot;
+  }
 }</pre></div></li></ul></li><li class="jsondiffpatch-unchanged" data-key="location"><div class="jsondiffpatch-property-name">location</div><div class="jsondiffpatch-value"><pre>null</pre></div></li><li class="jsondiffpatch-unchanged" data-key="sourceType"><div class="jsondiffpatch-property-name">sourceType</div><div class="jsondiffpatch-value"><pre>&quot;module&quot;</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Program&quot;</pre></div></li></ul></li></ul></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
   &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
   &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
@@ -112,15 +377,156 @@
         </article>
     
         <article>
-            <header><span>output</span></header>
-            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-unchanged" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><div class="jsondiffpatch-value"><pre>{
+            <header><span>Assembly_ModulesToJavascriptFiles, </span><span>File_CompileJavascript</span></header>
+            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-added" data-key="files"><div class="jsondiffpatch-property-name">files</div><div class="jsondiffpatch-value"><pre>[
+  {
+    &quot;type&quot;: &quot;File&quot;,
+    &quot;language&quot;: &quot;javascript&quot;,
+    &quot;content&quot;: &quot;import g from &apos;./glass&apos;;<br>import data from &apos;./glass/data&apos;;<br>import time from &apos;./glass/time&apos;;<br>import weird from &apos;./glass/weird-name&apos;;<br>import parent from &apos;../parent&apos;;<br>import grandparent from &apos;../../grandparent&apos;;&quot;
+  }
+]</pre></div></li><li class="jsondiffpatch-deleted" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><div class="jsondiffpatch-value"><pre>{
   &quot;sample.Sample1&quot;: {
     &quot;location&quot;: null,
     &quot;type&quot;: &quot;Program&quot;,
     &quot;sourceType&quot;: &quot;module&quot;,
-    &quot;body&quot;: []
+    &quot;body&quot;: [
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportDeclaration&quot;,
+        &quot;specifiers&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+            &quot;local&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;g&quot;
+            }
+          }
+        ],
+        &quot;source&quot;: {
+          &quot;location&quot;: null,
+          &quot;type&quot;: &quot;Literal&quot;,
+          &quot;value&quot;: &quot;./glass&quot;
+        }
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportDeclaration&quot;,
+        &quot;specifiers&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+            &quot;local&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;data&quot;
+            }
+          }
+        ],
+        &quot;source&quot;: {
+          &quot;location&quot;: null,
+          &quot;type&quot;: &quot;Literal&quot;,
+          &quot;value&quot;: &quot;./glass/data&quot;
+        }
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportDeclaration&quot;,
+        &quot;specifiers&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+            &quot;local&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;time&quot;
+            }
+          }
+        ],
+        &quot;source&quot;: {
+          &quot;location&quot;: null,
+          &quot;type&quot;: &quot;Literal&quot;,
+          &quot;value&quot;: &quot;./glass/time&quot;
+        }
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportDeclaration&quot;,
+        &quot;specifiers&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+            &quot;local&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;weird&quot;
+            }
+          }
+        ],
+        &quot;source&quot;: {
+          &quot;location&quot;: null,
+          &quot;type&quot;: &quot;Literal&quot;,
+          &quot;value&quot;: &quot;./glass/weird-name&quot;
+        }
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportDeclaration&quot;,
+        &quot;specifiers&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+            &quot;local&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;parent&quot;
+            }
+          }
+        ],
+        &quot;source&quot;: {
+          &quot;location&quot;: null,
+          &quot;type&quot;: &quot;Literal&quot;,
+          &quot;value&quot;: &quot;../parent&quot;
+        }
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;ImportDeclaration&quot;,
+        &quot;specifiers&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+            &quot;local&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;grandparent&quot;
+            }
+          }
+        ],
+        &quot;source&quot;: {
+          &quot;location&quot;: null,
+          &quot;type&quot;: &quot;Literal&quot;,
+          &quot;value&quot;: &quot;../../grandparent&quot;
+        }
+      }
+    ]
   }
 }</pre></div></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
+  &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
+  &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
+}</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Assembly&quot;</pre></div></li></ul></div></p>
+        </article>
+    
+        <article>
+            <header><span>output</span></header>
+            <p><div class="jsondiffpatch-delta jsondiffpatch-node jsondiffpatch-child-node-type-object"><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-unchanged" data-key="files"><div class="jsondiffpatch-property-name">files</div><div class="jsondiffpatch-value"><pre>[
+  {
+    &quot;type&quot;: &quot;File&quot;,
+    &quot;language&quot;: &quot;javascript&quot;,
+    &quot;content&quot;: &quot;import g from &apos;./glass&apos;;<br>import data from &apos;./glass/data&apos;;<br>import time from &apos;./glass/time&apos;;<br>import weird from &apos;./glass/weird-name&apos;;<br>import parent from &apos;../parent&apos;;<br>import grandparent from &apos;../../grandparent&apos;;&quot;
+  }
+]</pre></div></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
   &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
   &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
 }</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Assembly&quot;</pre></div></li></ul></div></p>

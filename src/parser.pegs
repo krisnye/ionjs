@@ -42,16 +42,20 @@ ModuleDeclaration
     = ImportDeclarations
     / ExportDeclaration
 
+ModuleStep
+    = Identifier
+    / StringLiteral
+
 ModulePath
-    = head:Identifier tail:("." @Identifier)*
+    = head:ModuleStep tail:("." @ModuleStep)*
     { return [head, ...tail] }
 
 SubImports
     = Indent @(Dent @ImportSubDeclaration)+ Outdent
 
 ImportSubDeclaration
-    = path:ModulePath as:(_ AsToken _ @Identifier)? children:(".*" EOL { return true } / EOL @SubImports?)
-    { return node("ImportSubDeclaration", {path,children,as}) }
+    = relative:'.'* path:ModulePath as:(_ AsToken _ @Identifier)? children:(".*" EOL { return true } / EOL @SubImports?)
+    { return node("ImportSubDeclaration", {relative:relative.length, path, children, as}) }
 
 ImportDeclarations
     = ImportToken EOL declarations:SubImports

@@ -37,16 +37,13 @@ function traverseChildren(container: any, visitor: Visitor, isArray: boolean, an
             if (childResult !== child && childResult !== undefined) {
                 let isChildArray = Array.isArray(childResult)
                 if (isChildArray) {
-                    console.log('child array')
                     if (!isArray) {
                         if (childResult.length > 0)
                             throw new Error("Cannot return array with length > 0 unless container is array")
                         else
-                            console.log('childResult is undefined')
                             childResult = undefined
                     }
                     else {
-                        console.log('set hasArrays to true')
                         hasArrays = true
                     }
                 }

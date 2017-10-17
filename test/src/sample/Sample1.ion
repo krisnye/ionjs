@@ -1,5 +1,8 @@
 
 import
-    glass
+    .glass as g
         data
         time
+        "weird-name" as weird
+    ..parent
+    ...grandparent

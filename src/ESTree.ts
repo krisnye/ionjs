@@ -289,9 +289,10 @@ export class ImportDeclarations extends Node {
 }
 
 export class ImportSubDeclaration extends Node {
-    path: Identifier[]
-    children: ImportSubDeclaration[] | null = null
-    as: Identifier | null = null
+    relative: number
+    path: (Identifier | Literal)[]
+    children: ImportSubDeclaration[] | null
+    as: Identifier | null
 }
 
 ////////////////////////////////////////////////////////////////////////////////
