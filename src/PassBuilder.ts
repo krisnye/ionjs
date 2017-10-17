@@ -100,10 +100,6 @@ export function createPass(filters: Filter[], options:{debug?:boolean} = {}): Pa
                 let {enters} = handler
                 for (let enter of enters) {
                     enter(node, ancestors, path)
-                    if (debug) {
-                        if (node.type !== type)
-                            throw new Error("Enter filter cannot modify node type: " + enter.name)
-                    }
                 }
             }
         },

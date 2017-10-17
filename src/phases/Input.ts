@@ -3,6 +3,7 @@ import toposort from "../toposort"
 import * as escodegen from "escodegen"
 import * as iot from "../IonAstTypes"
 import * as common from "../common"
+import * as est from "../ESTree"
 
 export function fail(node:any, message: string) {
     let error: any = new Error(message)
@@ -11,6 +12,11 @@ export function fail(node:any, message: string) {
     throw error
 }
 
+function __ImportDeclarations_toJavascript(node:est.ImportDeclarations) {
+    console.log('strip')
+    return remove
+}
+
 export const passes = [
-    []
+    [__ImportDeclarations_toJavascript]
 ]

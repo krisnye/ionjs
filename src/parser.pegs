@@ -1,9 +1,14 @@
 {
 
+    const es = require('./ESTree')
+
     function node(type, ...values) {
         let result = Object.assign({type, __location:location()}, ...values.reverse())
-        //  we set the type both before (show it shows first in enumeration)
-        //  and last so it overwrites any previous type in args
+        let ctor = es[type]
+        if (ctor != null)
+            return new ctor(result)
+        else
+            console.warn('Type not found: ' + type)
         result.type = type
         return result
     }
@@ -22,7 +27,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 Module
-    = EOL? statements:Statement* EOL EOF
+    = EOL? statements:(Statement / ModuleDeclaration)* EOL EOF
     { return node("Program", {sourceType:"module", body:statements}) }
 
 //  type Whole = Integer{ value > 0 and value < 10 }
@@ -30,28 +35,29 @@ Module
 //  value < 10 and value > 100
 
 ////////////////////////////////////////////////////////////////////////////////
-//  ImportDeclaration
+//  Module Declarations
 ////////////////////////////////////////////////////////////////////////////////
 
+ModuleDeclaration
+    = ImportDeclarations
+    / ExportDeclaration
+
 ModulePath
-    = head:Id tail:("." @Id)*
+    = head:Identifier tail:("." @Identifier)*
     { return [head, ...tail] }
 
 SubImports
-    = Indent @(Dent @ImportDeclaration)+ Outdent
+    = Indent @(Dent @ImportSubDeclaration)+ Outdent
 
-ImportDeclaration
-    = path:ModulePath as:(_ AsToken _ @IdDeclaration)? children:(".*" EOL { return true } / EOL @SubImports?)
-    { return node("ImportDeclaration", {path,children,id: as || path[path.length-1] }) }
+ImportSubDeclaration
+    = path:ModulePath as:(_ AsToken _ @Identifier)? children:(".*" EOL { return true } / EOL @SubImports?)
+    { return node("ImportSubDeclaration", {path,children,as}) }
 
 ImportDeclarations
-    = ImportToken EOL @SubImports
+    = ImportToken EOL declarations:SubImports
+    { return node("ImportDeclarations", {declarations} ) }
 
-////////////////////////////////////////////////////////////////////////////////
-//  Export
-////////////////////////////////////////////////////////////////////////////////
-
-ExportStatement
+ExportDeclaration
     = ExportToken _ declaration:Declaration
     { return declaration }
     / ExportToken EOL Indent declarations:(Dent @Declaration)+ Outdent
@@ -70,11 +76,9 @@ Statement
     / ForOfStatement
     / ReturnStatement
     / WhileStatement
-    / ExportStatement
 
 Declaration
-    = ImportDeclaration
-    / TypeDeclaration
+    = TypeDeclaration
     / ClassDeclaration
     / VariableDeclaration
 
@@ -83,7 +87,7 @@ ExpressionStatement
     { return node("ExpressionStatement", {expression}) }
 
 TypeDeclaration
-    = TypeToken _ id:IdDeclaration _ "=" _ value:Type EOL
+    = TypeToken _ id:Identifier _ "=" _ value:Type EOL
     { return node('TypeDeclaration', {id, value}) }
 
 VariableKind
@@ -123,15 +127,19 @@ VariableMetaProperties
     = EOL Indent @OutlineProperty+ Outdent
 
 OutlineProperty
-    = key:Id _ ":" _ value:OutlineExpression
+    = key:Identifier _ ":" _ value:OutlineExpression
     { return node("Property", {key,value}) }
 
 AssignmentOperator
     = "="
+    / "+="
+    / "-="
+    / "*="
+    / "/="
 
 AssignmentStatement
-    = left:Pattern _ AssignmentOperator _ right:OutlineExpression
-    { return node("AssignmentStatement", {left, right}) }
+    = left:Pattern _ operator:AssignmentOperator _ right:OutlineExpression
+    { return node("ExpressionStatement", node("AssignmentExpression", {left, operator, right})) }
 
 BlockStatement
     = EOL Indent body:(Dent @Statement)+ Outdent
@@ -163,7 +171,7 @@ ReturnStatement
 ////////////////////////////////////////////////////////////////////////////////
 
 Pattern
-    = IdDeclaration
+    = Identifier
     / ArrayPattern
     / ObjectPattern
 
@@ -187,15 +195,15 @@ ObjectPattern
     { return node("ObjectPattern", {properties:[head, ...tail]}) }
 
 AssignmentProperty
-    = key:Id value:(_ ":" _ @Pattern)?
-    { return node("Property", {key, value:value || node("IdDeclaration", key), kind:"init", shorthand:value == null} ) }
+    = key:Identifier value:(_ ":" _ @Pattern)?
+    { return node("Property", {key, value:value || node("Identifier", key), kind:"init", shorthand:value == null} ) }
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Class
 ////////////////////////////////////////////////////////////////////////////////
 
 ClassDeclaration
-    = kind:(ClassToken / StructToken) _ id:IdDeclaration typeParameters:TypeParameters? _ baseClasses:Extends? EOL
+    = kind:(ClassToken / StructToken) _ id:Identifier typeParameters:TypeParameters? _ baseClasses:Extends? EOL
         Indent variables:(Dent @ClassVariableDeclaration)* Outdent
         { return node("ClassDeclaration", {kind, id, typeParameters, baseClasses:baseClasses || [], variables}) }
 
@@ -240,7 +248,7 @@ TypeArguments
     { return [head, ...tail] }
 
 TypeReference
-    = id:IdReference _ args:TypeArguments?
+    = id:Identifier _ args:TypeArguments?
     { return node("TypeReference", id, {arguments:args}) }
     / "[" _ type:Type '*' _ "]"
     { return node("TypeReference", {name:"Array", arguments:[type]}) }
@@ -341,8 +349,8 @@ ConditionalExpression
 ////////////////////////////////////////////////////////////////////////////////
 
 Parameter
-    = id:IdDeclaration _ valueType:(":" + _ @Type)?
-    { return node("Parameter", {id, valueType})}
+    = pattern:Pattern _ valueType:(":" + _ @Type)?
+    { return node("Parameter", {pattern, valueType})}
 
 FunctionParameters
     = "(" _ ")" { return [] }
@@ -350,7 +358,7 @@ FunctionParameters
     / "(" _ head:Parameter tail:(_ ',' _ @Parameter)* _ ")" { return [head, ...tail] }
 
 FunctionHead
-    = id:(@Id _ &"(")? params:FunctionParameters? _ "->"
+    = id:(@Identifier _ &"(")? params:FunctionParameters? _ "->"
     { return {id, params: params || []} }
 
 InlineFunction
@@ -383,7 +391,7 @@ InlineExpression
     / ConditionalExpression
 
 PrimaryExpression
-    = IdReference
+    = Identifier
     / Literal
     / ThisExpression
     / GroupExpression
@@ -395,7 +403,7 @@ ThisExpression
     = ThisToken { return node('ThisExpression') }
 
 Argument
-    = key:(@Id _ ":")? _ value:InlineExpression
+    = key:(@Identifier _ ":")? _ value:InlineExpression
     { return key ? node("Property", {key,value,kind:'init'}) : value }
 
 ArgumentList
@@ -410,7 +418,7 @@ MemberExpression =
     head: PrimaryExpression
     tail: (
         "[" _ property:InlineExpression _ "]" { return {property, computed:false} }
-        / "." property:Id { return {property, computed:false} }
+        / "." property:Identifier { return {property, computed:false} }
         / InlineArguments
     )*
     {
@@ -489,14 +497,8 @@ IdName
     = $(!ReservedWord IdStart IdPart*)
     / "`" @($((!"`" .)*)) "`"
 
-Id "Id"
-    = name:IdName { return node('Id', {name}) }
-
-IdDeclaration
-    = name:IdName { return node('IdDeclaration', {name}) }
-
-IdReference
-    = name:IdName { return node('IdReference', {name}) }
+Identifier
+    = name:IdName { return node('Identifier', {name}) }
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Tokens and Keywords
