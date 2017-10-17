@@ -185,6 +185,34 @@
             &quot;as&quot;: null
           }
         ]
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;numberVariable&quot;
+            },
+            &quot;valueType&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;arguments&quot;: null,
+              &quot;name&quot;: &quot;number&quot;
+            },
+            &quot;init&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Literal&quot;,
+              &quot;value&quot;: 0,
+              &quot;base&quot;: 10
+            }
+          }
+        ]
       }
     ]
   }
@@ -333,26 +361,43 @@
       &quot;name&quot;: &quot;g&quot;
     }
   }
-]</pre></div></li><li class="jsondiffpatch-modified" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value jsondiffpatch-left-value"><pre>&quot;ImportDeclarations&quot;</pre></div><div class="jsondiffpatch-value jsondiffpatch-right-value"><pre>&quot;ImportDeclaration&quot;</pre></div></li></ul></li><li class="jsondiffpatch-added" data-key="1"><div class="jsondiffpatch-property-name">1</div><div class="jsondiffpatch-value"><pre>{
-  &quot;location&quot;: null,
-  &quot;type&quot;: &quot;ImportDeclaration&quot;,
-  &quot;specifiers&quot;: [
-    {
-      &quot;location&quot;: null,
-      &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
-      &quot;local&quot;: {
-        &quot;location&quot;: null,
-        &quot;type&quot;: &quot;Identifier&quot;,
-        &quot;name&quot;: &quot;data&quot;
-      }
-    }
-  ],
-  &quot;source&quot;: {
+]</pre></div></li><li class="jsondiffpatch-modified" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value jsondiffpatch-left-value"><pre>&quot;ImportDeclarations&quot;</pre></div><div class="jsondiffpatch-value jsondiffpatch-right-value"><pre>&quot;ImportDeclaration&quot;</pre></div></li></ul></li><li class="jsondiffpatch-node jsondiffpatch-child-node-type-object" data-key="1"><div class="jsondiffpatch-property-name">1</div><ul class="jsondiffpatch-node jsondiffpatch-node-type-object"><li class="jsondiffpatch-deleted" data-key="declarations"><div class="jsondiffpatch-property-name">declarations</div><div class="jsondiffpatch-value"><pre>[
+  {
     &quot;location&quot;: null,
-    &quot;type&quot;: &quot;Literal&quot;,
-    &quot;value&quot;: &quot;glass/data&quot;
+    &quot;type&quot;: &quot;VariableDeclarator&quot;,
+    &quot;id&quot;: {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;Identifier&quot;,
+      &quot;name&quot;: &quot;numberVariable&quot;
+    },
+    &quot;valueType&quot;: {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;Identifier&quot;,
+      &quot;arguments&quot;: null,
+      &quot;name&quot;: &quot;number&quot;
+    },
+    &quot;init&quot;: {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;Literal&quot;,
+      &quot;value&quot;: 0,
+      &quot;base&quot;: 10
+    }
   }
-}</pre></div></li><li class="jsondiffpatch-added" data-key="2"><div class="jsondiffpatch-property-name">2</div><div class="jsondiffpatch-value"><pre>{
+]</pre></div></li><li class="jsondiffpatch-deleted" data-key="kind"><div class="jsondiffpatch-property-name">kind</div><div class="jsondiffpatch-value"><pre>&quot;let&quot;</pre></div></li><li class="jsondiffpatch-unchanged" data-key="location"><div class="jsondiffpatch-property-name">location</div><div class="jsondiffpatch-value"><pre>null</pre></div></li><li class="jsondiffpatch-added" data-key="source"><div class="jsondiffpatch-property-name">source</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;Literal&quot;,
+  &quot;value&quot;: &quot;glass/data&quot;
+}</pre></div></li><li class="jsondiffpatch-added" data-key="specifiers"><div class="jsondiffpatch-property-name">specifiers</div><div class="jsondiffpatch-value"><pre>[
+  {
+    &quot;location&quot;: null,
+    &quot;type&quot;: &quot;ImportDefaultSpecifier&quot;,
+    &quot;local&quot;: {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;Identifier&quot;,
+      &quot;name&quot;: &quot;data&quot;
+    }
+  }
+]</pre></div></li><li class="jsondiffpatch-modified" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value jsondiffpatch-left-value"><pre>&quot;VariableDeclaration&quot;</pre></div><div class="jsondiffpatch-value jsondiffpatch-right-value"><pre>&quot;ImportDeclaration&quot;</pre></div></li></ul></li><li class="jsondiffpatch-added" data-key="2"><div class="jsondiffpatch-property-name">2</div><div class="jsondiffpatch-value"><pre>{
   &quot;location&quot;: null,
   &quot;type&quot;: &quot;ImportDeclaration&quot;,
   &quot;specifiers&quot;: [
@@ -447,6 +492,33 @@
     &quot;type&quot;: &quot;Literal&quot;,
     &quot;value&quot;: &quot;../../grandparent&quot;
   }
+}</pre></div></li><li class="jsondiffpatch-added" data-key="7"><div class="jsondiffpatch-property-name">7</div><div class="jsondiffpatch-value"><pre>{
+  &quot;location&quot;: null,
+  &quot;type&quot;: &quot;VariableDeclaration&quot;,
+  &quot;kind&quot;: &quot;let&quot;,
+  &quot;declarations&quot;: [
+    {
+      &quot;location&quot;: null,
+      &quot;type&quot;: &quot;VariableDeclarator&quot;,
+      &quot;id&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;name&quot;: &quot;numberVariable&quot;
+      },
+      &quot;valueType&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Identifier&quot;,
+        &quot;arguments&quot;: null,
+        &quot;name&quot;: &quot;number&quot;
+      },
+      &quot;init&quot;: {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;Literal&quot;,
+        &quot;value&quot;: 0,
+        &quot;base&quot;: 10
+      }
+    }
+  ]
 }</pre></div></li></ul></li><li class="jsondiffpatch-unchanged" data-key="location"><div class="jsondiffpatch-property-name">location</div><div class="jsondiffpatch-value"><pre>null</pre></div></li><li class="jsondiffpatch-unchanged" data-key="sourceType"><div class="jsondiffpatch-property-name">sourceType</div><div class="jsondiffpatch-value"><pre>&quot;module&quot;</pre></div></li><li class="jsondiffpatch-unchanged" data-key="type"><div class="jsondiffpatch-property-name">type</div><div class="jsondiffpatch-value"><pre>&quot;Program&quot;</pre></div></li></ul></li></ul></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
   &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
   &quot;output&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/lib&quot;
@@ -459,7 +531,7 @@
   {
     &quot;type&quot;: &quot;File&quot;,
     &quot;language&quot;: &quot;javascript&quot;,
-    &quot;content&quot;: &quot;import g from &apos;glass&apos;;<br>import data from &apos;glass/data&apos;;<br>import time from &apos;glass/time&apos;;<br>import weird from &apos;glass/weird-name&apos;;<br>import nibling from &apos;./sibling/nibling&apos;;<br>import parent from &apos;../parent&apos;;<br>import grandparent from &apos;../../grandparent&apos;;&quot;
+    &quot;content&quot;: &quot;import g from &apos;glass&apos;;<br>import data from &apos;glass/data&apos;;<br>import time from &apos;glass/time&apos;;<br>import weird from &apos;glass/weird-name&apos;;<br>import nibling from &apos;./sibling/nibling&apos;;<br>import parent from &apos;../parent&apos;;<br>import grandparent from &apos;../../grandparent&apos;;<br>let numberVariable = 0;&quot;
   }
 ]</pre></div></li><li class="jsondiffpatch-deleted" data-key="modules"><div class="jsondiffpatch-property-name">modules</div><div class="jsondiffpatch-value"><pre>{
   &quot;sample.Sample1&quot;: {
@@ -606,6 +678,34 @@
           &quot;type&quot;: &quot;Literal&quot;,
           &quot;value&quot;: &quot;../../grandparent&quot;
         }
+      },
+      {
+        &quot;location&quot;: null,
+        &quot;type&quot;: &quot;VariableDeclaration&quot;,
+        &quot;kind&quot;: &quot;let&quot;,
+        &quot;declarations&quot;: [
+          {
+            &quot;location&quot;: null,
+            &quot;type&quot;: &quot;VariableDeclarator&quot;,
+            &quot;id&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;name&quot;: &quot;numberVariable&quot;
+            },
+            &quot;valueType&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Identifier&quot;,
+              &quot;arguments&quot;: null,
+              &quot;name&quot;: &quot;number&quot;
+            },
+            &quot;init&quot;: {
+              &quot;location&quot;: null,
+              &quot;type&quot;: &quot;Literal&quot;,
+              &quot;value&quot;: 0,
+              &quot;base&quot;: 10
+            }
+          }
+        ]
       }
     ]
   }
@@ -621,7 +721,7 @@
   {
     &quot;type&quot;: &quot;File&quot;,
     &quot;language&quot;: &quot;javascript&quot;,
-    &quot;content&quot;: &quot;import g from &apos;glass&apos;;<br>import data from &apos;glass/data&apos;;<br>import time from &apos;glass/time&apos;;<br>import weird from &apos;glass/weird-name&apos;;<br>import nibling from &apos;./sibling/nibling&apos;;<br>import parent from &apos;../parent&apos;;<br>import grandparent from &apos;../../grandparent&apos;;&quot;
+    &quot;content&quot;: &quot;import g from &apos;glass&apos;;<br>import data from &apos;glass/data&apos;;<br>import time from &apos;glass/time&apos;;<br>import weird from &apos;glass/weird-name&apos;;<br>import nibling from &apos;./sibling/nibling&apos;;<br>import parent from &apos;../parent&apos;;<br>import grandparent from &apos;../../grandparent&apos;;<br>let numberVariable = 0;&quot;
   }
 ]</pre></div></li><li class="jsondiffpatch-unchanged" data-key="options"><div class="jsondiffpatch-property-name">options</div><div class="jsondiffpatch-value"><pre>{
   &quot;input&quot;: &quot;/Users/krisnye/Projects/language/ionjs/test/src&quot;,
