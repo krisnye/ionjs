@@ -1,8 +1,10 @@
 
 import
-    .glass as g
+    glass as g
         data
         time
         "weird-name" as weird
+    .sibling
+        nibling
     ..parent
     ...grandparent
