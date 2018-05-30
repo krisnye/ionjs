@@ -1,12 +1,4 @@
 
-import
-    glass as g
-        data
-        time
-        "weird-name" as weird
-    .sibling
-        nibling
-    ..parent
-    ...grandparent
-
-let numberVariable: number = 0
+class Point
+    let x: number
+    let y: number
